@@ -1,0 +1,67 @@
+/* Import Google fonts */
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Source+Sans+Pro:wght@300&display=swap');
+
+/* Set initial values */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+/* Background */
+
+body {
+    background-image: linear-gradient(to top, #ff99c8, #fcf6bd, #d0f4de, #a9def9, #e4c1f9);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+    color: black;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+}
+
+/* header */
+
+header {
+    width: 100%;
+    margin: 20px;
+    padding: 10px;
+}
+
+h1 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 28px;
+    text-align: center;
+}
+
+
+/* Footer */
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    list-style-type: none;
+    padding: 5px;
+}
+
+footer p {
+    text-align: center;
+}
