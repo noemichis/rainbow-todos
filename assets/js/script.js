@@ -64,5 +64,4 @@ function addTodo(event) {
         // clear todo input value
         todoInput.value = "";
     }
-
 }

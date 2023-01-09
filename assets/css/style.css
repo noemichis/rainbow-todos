@@ -24,6 +24,9 @@ button {
 /* Background */
 
 body {
+    width: 90%;
+    margin: auto;
+
     background-image: linear-gradient(to top, #ff99c8, #fcf6bd, #d0f4de, #a9def9, #e4c1f9);
     background-repeat: no-repeat;
     background-size: cover;
@@ -34,10 +37,10 @@ body {
     font-size: 18px;
 }
 
+
 /* header */
 
 header {
-    width: 100%;
     margin: 20px;
     padding: 10px;
 }
@@ -65,6 +68,7 @@ form {
     padding: 10px;
     border-radius: 20px 0px;
     border: 1px solid black;
+    font-size: 16px;
 }
 
 /* buttons */
@@ -79,9 +83,45 @@ img {
     padding: 2px;
 }
 
+/* ToDo Section */
+
+#todo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.todo {
+    padding: 5px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.todo * {
+    display: flex;
+    justify-content: center;
+}
+
+.todo-item {
+    background: linear-gradient(to top, rgba(255, 153, 200, 0.8), rgba(252, 246, 189, 0.8), rgba(208, 244, 222, 0.8), rgba(169, 222, 249, 0.8), rgba(229, 195, 249, 0.8));
+    border-radius: 5px 10px;
+    text-align: center;
+    border: 1px solid black;
+    margin-left: 5px;
+}
+
+.lead-img {
+    padding: 0;
+}
+
+
 /* Footer */
 
 footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     position: fixed;
     bottom: 0;
