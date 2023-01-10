@@ -58,7 +58,7 @@ function addTodo(event) {
     // append to list
 
     if (todoInput.value == '') {
-        alert('Ooops, add a ToDo')
+        swal("Ooops...", "please, add a ToDo!")
     } else {
         todoList.appendChild(todoDiv);
         // clear todo input value
