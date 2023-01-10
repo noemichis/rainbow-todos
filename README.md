@@ -88,10 +88,12 @@ I used several sites to understand the logic behind JavaScript, as:
 - [MDN](https://developer.mozilla.org/en-US/) 
 - [CSS-tricks](https://css-tricks) 
 - [Stack Overflow](https://stackoverflow.com/)
+- [JavaScript in Plain English](https://javascript.plainenglish.io/)
 
-Also, I watched many YouTube videos, analyzed various to-do projects and combined some ideas:
-- [Developed By Ed](https://www.youtube.com/watch?v=Ttf3CEsEwMQ&ab_channel=developedbyed) - Main frame of the project
+Also, I watched many YouTube videos, analyzed various to-do projects and used the combined knowledge:
+- [Developed By Ed](https://www.youtube.com/watch?v=Ttf3CEsEwMQ&ab_channel=developedbyed) - base design of the project
 - [Todo List Application by Chris Sun](https://codepad.co/snippet/todo-list-application) - creating and appending DOM elements
+- [CodeExplained](https://www.youtube.com/watch?v=i1pxPSl9ZHc&ab_channel=CodeExplained) - functions and events
 
 [Ian Lunn](https://ianlunn.co.uk/articles/hover-css-tutorial-introduction) - CSS code for bounce on hover effect
 
