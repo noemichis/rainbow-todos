@@ -18,6 +18,8 @@ body {
 input,
 button {
     font-family: 'Source Sans Pro', sans-serif;
+    color: black;
+    font-weight: bold;
     border: none;
     outline: none;
 }
@@ -32,7 +34,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    overflow: hidden;
+    /* overflow: hidden; */
     color: black;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
@@ -56,7 +58,7 @@ h1 {
 
 form {
     width: 90%;
-    margin: auto;
+    margin: 20px auto;
 
     display: flex;
     justify-content: center;
@@ -68,10 +70,20 @@ form {
     width: 80%;
     padding: 10px;
     border-radius: 20px 0px;
-    border: 1px solid black;
-    font-size: 16px;
+    border: 1px solid #483e4e;
+    /* box-shadow: inset 0 2px 10px #ff99c8, inset 0 3px 15px #a9def9, inset 0 4px 20px #e4c1f9; */
+    background: linear-gradient(to top, rgba(255, 153, 200, 0.5), rgba(252, 246, 189, 0.5), rgba(208, 244, 222, 0.5), rgba(169, 222, 249, 0.5), rgba(229, 195, 249, 0.5));
+    font-size: 18px;
 }
 
+#todo-input:hover {
+    border: 1.5px solid #71627a;
+}
+
+
+#todo-input:focus {
+    border: 1.5px solid #483e4e;
+}
 
 /* buttons */
 
@@ -104,6 +116,12 @@ img {
 
 /* ToDo Section */
 
+h2 {
+    font-size: 20px;
+    text-align: center;
+    color: #483e4e;
+}
+
 #todo-container {
     display: flex;
     flex-direction: column;
@@ -111,7 +129,8 @@ img {
 }
 
 .todo {
-    padding: 5px 0px;
+    margin: 5px 0;
+    padding: 5px 0;
     display: flex;
     flex-wrap: wrap;
     align-content: center;
@@ -123,11 +142,12 @@ img {
 }
 
 .todo-item {
+    margin-left: 5px;
     background: linear-gradient(to top, rgba(255, 153, 200, 0.8), rgba(252, 246, 189, 0.8), rgba(208, 244, 222, 0.8), rgba(169, 222, 249, 0.8), rgba(229, 195, 249, 0.8));
     border-radius: 5px 10px;
     text-align: center;
-    border: 1px solid black;
-    margin-left: 5px;
+    border: 1px solid #483e4e;
+    font-size: 14px;
 }
 
 .lead-img {
@@ -159,6 +179,7 @@ li {
 
 footer p {
     text-align: center;
+    font-size: 14px;
 }
 
 i {
