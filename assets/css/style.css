@@ -17,6 +17,7 @@ body {
 
 input,
 button {
+    font-family: 'Source Sans Pro', sans-serif;
     border: none;
     outline: none;
 }
@@ -71,10 +72,28 @@ form {
     font-size: 16px;
 }
 
+
 /* buttons */
 
 button {
+    cursor: pointer;
     background: none;
+}
+
+/* Button bounce on hover taken from https://github.com/IanLunn/Hover */
+
+button img {
+    transform: translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transition-timing-function: ease-out;
+}
+
+button:hover img,
+button:focus img,
+button:active img {
+    transform: scale(1.1);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
 
 img {
@@ -140,4 +159,23 @@ li {
 
 footer p {
     text-align: center;
+}
+
+i {
+    cursor: pointer;
+    color: black;
+}
+
+i:hover {
+    transform: scale(1.5);
+    color: #fcf6bd;
+}
+
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #d0f4de;
 }
