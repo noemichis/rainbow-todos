@@ -97,4 +97,10 @@ function addTodo(event) {
             checkButton.classList.replace('reopen-btn', 'check-btn');
         }
     }
+
+    // delete function
+    function deleteTodo() {
+        const div = todoDiv.parentNode;
+        div.removeChild(todoDiv);
+    }
 }
