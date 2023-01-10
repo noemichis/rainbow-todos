@@ -70,8 +70,8 @@ function addTodo(event) {
     checkButton.addEventListener('click', (checkTodo));
     deleteButton.addEventListener('click', (deleteTodo));
 
-    // function editTodo
-
+    // controlers functions
+    // edit function
     function editTodo() {
         if (todoItem.disabled == true) {
             todoItem.disabled = false;
@@ -82,6 +82,19 @@ function addTodo(event) {
             todoItem.disabled = true;
             editButton.classList.replace('save-btn', 'edit-btn');
             editButton.innerHTML = '<img src="assets/images/edit.png">';
+        }
+    }
+
+    // check function
+    function checkTodo() {
+        if (checkButton.classList.contains('check-btn')) {
+            todoIcon.src = "assets/images/done.png";
+            todoComplete.appendChild(todoDiv);
+            checkButton.classList.replace('check-btn', 'reopen-btn');
+        } else {
+            todoIcon.src = "assets/images/to-do-list.png";
+            todoList.appendChild(todoDiv);
+            checkButton.classList.replace('reopen-btn', 'check-btn');
         }
     }
 }
