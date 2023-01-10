@@ -64,4 +64,24 @@ function addTodo(event) {
         // clear todo input value
         todoInput.value = "";
     }
+
+    // controlers event listeners
+    editButton.addEventListener('click', (editTodo));
+    checkButton.addEventListener('click', (checkTodo));
+    deleteButton.addEventListener('click', (deleteTodo));
+
+    // function editTodo
+
+    function editTodo() {
+        if (todoItem.disabled == true) {
+            todoItem.disabled = false;
+            todoItem.focus();
+            editButton.classList.replace('edit-btn', 'save-btn');
+            editButton.innerHTML = '<img src="assets/images/save.png">';
+        } else {
+            todoItem.disabled = true;
+            editButton.classList.replace('save-btn', 'edit-btn');
+            editButton.innerHTML = '<img src="assets/images/edit.png">';
+        }
+    }
 }
