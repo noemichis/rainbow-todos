@@ -109,8 +109,8 @@ button:active img {
 }
 
 img {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     padding: 2px;
 }
 
@@ -134,6 +134,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     align-content: center;
+    align-items: center;
 }
 
 .todo * {
@@ -143,11 +144,12 @@ h2 {
 
 .todo-item {
     margin-left: 5px;
+    padding: 7.5px 0;
     background: linear-gradient(to top, rgba(255, 153, 200, 0.8), rgba(252, 246, 189, 0.8), rgba(208, 244, 222, 0.8), rgba(169, 222, 249, 0.8), rgba(229, 195, 249, 0.8));
     border-radius: 5px 10px;
     text-align: center;
     border: 1px solid #483e4e;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .lead-img {
@@ -199,4 +201,32 @@ a {
 
 a:hover {
     color: #d0f4de;
+}
+
+/* Media screens */
+
+@media screen and (min-width: 380px) {
+    form {
+        width: 80%;
+    }
+
+    .todo-item {
+        width: 200px;
+    }
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+@media screen and (min-width: 520px) {
+    form {
+        width: 400px;
+    }
+
+    .todo-item {
+        width: 300px;
+    }
+
 }
