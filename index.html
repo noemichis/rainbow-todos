@@ -17,22 +17,24 @@
     </header>
 
     <!-- Form section -->
-    <section>
+    <div>
         <form autocomplete="off">
             <input type="text" id="todo-input" placeholder="Add a ToDo">
             <button id="todo-btn" type="submit">
-                <img src="assets/images/add.png">
+                <img src="assets/images/add.png" alt="submit icon">
             </button>
         </form>
-    </section>
+    </div>
 
     <!-- ToDo List Section -->
     <section id="todo-container">
         <div id="todo-list">
+            <h2>ToDo's</h2>
             <!-- new list items here -->
         </div>
 
         <div id="todo-done">
+            <h2>Completed ToDo's</h2>
             <!-- completed items moved here -->
         </div>
     </section>
@@ -40,14 +42,25 @@
     <!-- Footer -->
     <footer>
         <ul class="links">
-            <li>LinkedIn</li>
-            <li>Github</li>
+            <li><a href="https://www.linkedin.com/in/noemi-chis-hunyadi-b8a31b211/" target="_blank"
+                    aria-label="Check out my Linkedin page">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>
+            <li><a href="https://github.com/noemichis" target="_blank" aria-label="Check out my Github page">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
         </ul>
         <p>Designed by Noemi Chis 2023</p>
-        <p>Icons created by Freepik - Flaticon</p>
+        <p>Icons made by <a href="https://www.freepik.com/" target="_blank"
+                aria-label="Check out Freepik page">Freepik</a> from <a href="https://www.flaticon.com/" target="_blank"
+                aria-label="Check out Flaticon page">Flaticon</a></p>
     </footer>
 
-    <!-- Script -->
+    <!-- Fontawesome script -->
+    <script src="https://kit.fontawesome.com/d464e9b559.js" crossorigin="anonymous"></script>
+    <!-- JavaScript -->
     <script src="assets/js/script.js"></script>
 </body>
 
