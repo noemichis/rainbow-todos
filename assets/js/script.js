@@ -7,12 +7,13 @@ const clock = document.getElementById('clock');
 
 // event listeners
 todoButton.addEventListener('click', addTodo);
-document.addEventListener('DOMContentLoaded', time);
+document.addEventListener('DOMContentLoaded', timeDate);
 
 // functions
+const date = new Date();
 
 // get date function
-function time() {
+function timeDate() {
     const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
     const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
@@ -26,6 +27,7 @@ function time() {
     min = addZero(min);
 
     function addZero(nmbr) {
+
         if (nmbr < 10) {
             nmbr = "0" + nmbr;
         }
@@ -33,6 +35,7 @@ function time() {
     }
 
     clock.innerHTML = `<p>${weekday}, ${month} ${day}, ${hour}:${min}</p>`;
+    setTimeout(timeDate, 1000);
 }
 
 // addTodo function
