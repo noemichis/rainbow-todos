@@ -48,11 +48,15 @@ function addTodo(event) {
     const todoDiv = document.createElement('div');
     todoDiv.classList.add('todo');
 
+    // elements div
+    const elemDiv = document.createElement('div');
+    elemDiv.classList.add('elem')
+
     // todo icon
     const todoIcon = document.createElement('img');
     todoIcon.src = "assets/images/to-do-list.png";
     todoIcon.classList.add('lead-img');
-    todoDiv.appendChild(todoIcon);
+    elemDiv.appendChild(todoIcon);
 
     // todo item
     const todoItem = document.createElement('input');
@@ -60,23 +64,32 @@ function addTodo(event) {
     todoItem.type = 'text';
     todoItem.value = todoInput.value;
     todoItem.disabled = true;
-    todoDiv.appendChild(todoItem);
+    elemDiv.appendChild(todoItem);
 
     // edit button
     const editButton = document.createElement('button');
     // editButton.innerHTML = '<img src="assets/images/edit.png">';
     editButton.classList.add('edit-btn');
-    todoDiv.appendChild(editButton);
+    elemDiv.appendChild(editButton);
     // check button
     const checkButton = document.createElement('button');
     checkButton.innerHTML = '<img src="assets/images/check.png">';
     checkButton.classList.add('check-btn');
-    todoDiv.appendChild(checkButton);
+    elemDiv.appendChild(checkButton);
     // delete button
     const deleteButton = document.createElement('button');
     deleteButton.innerHTML = '<img src="assets/images/delete.png">';
     deleteButton.classList.add('delete-btn');
-    todoDiv.appendChild(deleteButton);
+    elemDiv.appendChild(deleteButton);
+
+    // timestamp div 
+    const timestmp = document.createElement('div');
+    timestmp.classList.add('stamp');
+    timestmp.innerHTML = clock.innerHTML;
+
+    // append divs to todoDiv
+    todoDiv.appendChild(elemDiv);
+    todoDiv.appendChild(timestmp);
 
     // append to list
     const inputValue = todoInput.value;
