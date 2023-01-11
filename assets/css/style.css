@@ -108,13 +108,41 @@ button {
     background: none;
 }
 
-/* Button bounce on hover inspiration from https://github.com/IanLunn/Hover */
+.edit-btn {
+    background-image: url(../images/edit.png);
+}
 
-img {
+.save-btn {
+    background: url(../images/save.png);
+}
+
+.check-btn {
+    background: url(../images/check.png);
+}
+
+.delete-btn {
+    background: url(../images/delete.png);
+}
+
+.reopen-btn {
+    background: url(../images/refresh.png);
+}
+
+.edit-btn,
+.save-btn,
+.check-btn,
+.delete-btn,
+.reopen-btn {
+    margin: 1px;
     width: 25px;
     height: 25px;
-    padding: 2px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
+
+/* Button bounce on hover inspiration from https://github.com/IanLunn/Hover */
 
 button {
     transform: translateZ(0);
@@ -174,7 +202,7 @@ h2 {
 }
 
 .todo-item {
-    margin-left: 5px;
+    margin-left: 2.5px;
     padding: 7.5px 0;
     background: linear-gradient(to bottom, rgba(255, 153, 200, 0.8), rgba(252, 246, 189, 0.8), rgba(208, 244, 222, 0.8), rgba(169, 222, 249, 0.8), rgba(229, 195, 249, 0.8));
     border-radius: 5px 10px;
@@ -196,6 +224,7 @@ h2 {
     font-size: 14px;
 }
 
+/* Clock */
 
 #clock {
     position: absolute;
@@ -206,7 +235,7 @@ h2 {
 #clock p {
     font-weight: bold;
     font-size: 18px;
-    text-shadow: 1px 1px 10px #d0f4de;
+    text-shadow: 1px 0px 1px #d0f4de;
 
 }
 
@@ -281,11 +310,6 @@ a:hover {
         width: 200px;
         font-size: 18px;
     }
-
-    img {
-        width: 30px;
-        height: 30px;
-    }
 }
 
 @media screen and (min-width: 520px) {
@@ -297,24 +321,19 @@ a:hover {
         width: 300px;
     }
 
-}
+    .lead-img {
+        width: 35px;
+        height: 35px;
+    }
 
-.edit-btn {
-    width: 30px;
-    height: 30px;
+    .edit-btn,
+    .save-btn,
+    .check-btn,
+    .delete-btn,
+    .reopen-btn {
+        margin: 2px;
+        width: 30px;
+        height: 30px;
+    }
 
-    background-image: url(../images/edit.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-}
-
-.save-btn {
-    width: 30px;
-    height: 30px;
-
-    background: url(../images/save.png) no-repeat center center fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }

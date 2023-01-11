@@ -6,22 +6,21 @@ const todoComplete = document.getElementById('todo-done');
 const clock = document.getElementById('clock');
 
 // event listeners
-
 todoButton.addEventListener('click', addTodo);
 document.addEventListener('DOMContentLoaded', time);
 
 // functions
-// get date function
 
+// get date function
 function time() {
     const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
-    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
-    let date = new Date();
-    let year = date.getFullYear();
-    month = months[date.getMonth()];
-    let day = date.getDate();
-    let weekday = weekdays[date.getDay()];
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = months[date.getMonth()];
+    const day = date.getDate();
+    const weekday = weekdays[date.getDay()];
     let hour = date.getHours();
     let min = date.getMinutes();
     hour = addZero(hour);
@@ -34,11 +33,10 @@ function time() {
         return nmbr;
     }
 
-    clock.innerHTML = `<p>${weekday}, ${month} ${day}, ${hour}:${min}</p>`
+    clock.innerHTML = `<p>${weekday}, ${month} ${day}, ${hour}:${min}</p>`;
 }
 
 // addTodo function
-
 function addTodo(event) {
     // prevent form submission
     event.preventDefault();
@@ -50,7 +48,7 @@ function addTodo(event) {
 
     // elements div
     const elemDiv = document.createElement('div');
-    elemDiv.classList.add('elem')
+    elemDiv.classList.add('elem');
 
     // todo icon
     const todoIcon = document.createElement('img');
@@ -68,17 +66,16 @@ function addTodo(event) {
 
     // edit button
     const editButton = document.createElement('button');
-    // editButton.innerHTML = '<img src="assets/images/edit.png">';
     editButton.classList.add('edit-btn');
     elemDiv.appendChild(editButton);
+
     // check button
     const checkButton = document.createElement('button');
-    checkButton.innerHTML = '<img src="assets/images/check.png">';
     checkButton.classList.add('check-btn');
     elemDiv.appendChild(checkButton);
+
     // delete button
     const deleteButton = document.createElement('button');
-    deleteButton.innerHTML = '<img src="assets/images/delete.png">';
     deleteButton.classList.add('delete-btn');
     elemDiv.appendChild(deleteButton);
 
@@ -87,20 +84,21 @@ function addTodo(event) {
     timestmp.classList.add('stamp');
     timestmp.innerHTML = clock.innerHTML;
 
-    // append divs to todoDiv
+    // append elements and timestamp div to todoDiv
     todoDiv.appendChild(elemDiv);
     todoDiv.appendChild(timestmp);
 
     // append to list
     const inputValue = todoInput.value;
     if (inputValue == '' || inputValue.match(/^ *$/) !== null) {
-        swal("Ooops...", "please, add a ToDo!")
+        swal("Oops...", "please, add a ToDo!");
     } else {
         todoList.appendChild(todoDiv);
         // clear todo input value
         todoInput.value = "";
     }
 
+    // if element added hide empty state message
     if (checkTodos() > 0) {
         var emptySpan = document.getElementById('empty');
         emptySpan.style.display = 'none';
@@ -118,11 +116,9 @@ function addTodo(event) {
             todoItem.disabled = false;
             todoItem.focus();
             editButton.classList.replace('edit-btn', 'save-btn');
-            // editButton.innerHTML = '<img src="assets/images/save.png">';
         } else {
             todoItem.disabled = true;
             editButton.classList.replace('save-btn', 'edit-btn');
-            // editButton.innerHTML = '<img src="assets/images/edit.png">';
         }
     }
 
