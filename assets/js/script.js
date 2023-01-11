@@ -8,6 +8,10 @@ const todoComplete = document.getElementById('todo-done');
 
 todoButton.addEventListener('click', addTodo);
 
+function checkTodos() {
+    return document.getElementsByClassName('todo').length;
+}
+
 // functions
 
 function addTodo(event) {
@@ -33,26 +37,26 @@ function addTodo(event) {
     todoItem.disabled = true;
     todoDiv.appendChild(todoItem);
 
-    // button div
-    const buttonDiv = document.createElement('div');
-    buttonDiv.classList.add('buttons');
-    todoDiv.appendChild(buttonDiv);
+    // // button div
+    // const buttonDiv = document.createElement('div');
+    // buttonDiv.classList.add('buttons');
+    // todoDiv.appendChild(buttonDiv);
 
     // edit button
     const editButton = document.createElement('button');
     editButton.innerHTML = '<img src="assets/images/edit.png">';
     editButton.classList.add('edit-btn');
-    buttonDiv.appendChild(editButton);
+    todoDiv.appendChild(editButton);
     // check button
     const checkButton = document.createElement('button');
     checkButton.innerHTML = '<img src="assets/images/check.png">';
     checkButton.classList.add('check-btn');
-    buttonDiv.appendChild(checkButton);
+    todoDiv.appendChild(checkButton);
     // delete button
     const deleteButton = document.createElement('button');
     deleteButton.innerHTML = '<img src="assets/images/delete.png">';
     deleteButton.classList.add('delete-btn');
-    buttonDiv.appendChild(deleteButton);
+    todoDiv.appendChild(deleteButton);
 
 
     // append to list
@@ -63,6 +67,11 @@ function addTodo(event) {
         todoList.appendChild(todoDiv);
         // clear todo input value
         todoInput.value = "";
+    }
+
+    if (checkTodos() > 0) {
+        var emptySpan = document.getElementById('empty');
+        emptySpan.style.display = 'none';
     }
 
     // controlers event listeners
@@ -98,9 +107,20 @@ function addTodo(event) {
         }
     }
 
+    // for (let i = 0; i < deleteButton.length; i++) {
+    //     deleteButton[i].onclick = function () {
+    //         const div = deleteButton[i].parentElement;
+    //         div.parentElement.remove();
+    //     }
+    // }
+
     // delete function
     function deleteTodo() {
         const div = todoDiv.parentNode;
         div.removeChild(todoDiv);
+        if (checkTodos() == 0) {
+            var emptySpan = document.getElementById('empty');
+            emptySpan.style.display = 'block';
+        }
     }
 }
