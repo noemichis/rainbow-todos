@@ -45,6 +45,21 @@ body {
 header {
     margin: 20px;
     padding: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#name {
+    background-color: transparent;
+    font-size: 28px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#rainbow {
+    width: 50px;
+    height: 50px;
 }
 
 h1 {
@@ -116,6 +131,21 @@ button:active img {
 }
 
 /* ToDo Section */
+
+
+#empty {
+    text-align: center;
+}
+
+#empty img {
+    width: 50px;
+    height: 50px;
+}
+
+p {
+    font-family: 'Quicksand';
+    font-style: italic;
+}
 
 h2 {
     font-size: 20px;
