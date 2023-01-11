@@ -8,6 +8,7 @@
     <meta name="description" content="A rainbow ToDo List">
     <meta name="keywords" content="todo-list, to-do list, colorful to-do, rainbow, notes, organizer">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="assets/images/rainbow.png">
     <title>Rainbow ToDo's</title>
 </head>
 
@@ -22,6 +23,7 @@
     <!-- Form section -->
     <div>
         <form autocomplete="off">
+            <label for="todo-input"></label>
             <input type="text" id="todo-input" placeholder="Add a ToDo">
             <button id="todo-btn" type="submit">
                 <img src="assets/images/add.png" alt="submit icon">
@@ -32,7 +34,7 @@
     <div id="clock"></div>
 
     <!-- ToDo List Section -->
-    <section id="todo-container">
+    <div id="todo-container">
         <div id="empty">
             <img src="assets/images/flower.png" alt="colorful flower icon">
             <p>Your list is empty, let's add some tasks..</p>
@@ -47,7 +49,7 @@
             <!-- completed items moved here -->
         </div>
 
-    </section>
+    </div>
 
 
 

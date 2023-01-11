@@ -142,7 +142,7 @@ button {
     background-size: cover;
 }
 
-/* Button bounce on hover inspiration from https://github.com/IanLunn/Hover */
+/* Button bounce on hover from https://github.com/IanLunn/Hover */
 
 button {
     transform: translateZ(0);
