@@ -116,16 +116,16 @@ img {
     padding: 2px;
 }
 
-button img {
+button {
     transform: translateZ(0);
     transition-duration: 0.3s;
     transition-property: transform;
     transition-timing-function: ease-out;
 }
 
-button:hover img,
-button:focus img,
-button:active img {
+button:hover,
+button:focus,
+button:active {
     transform: scale(1.1);
     transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
 }
@@ -275,4 +275,24 @@ a:hover {
         width: 300px;
     }
 
+}
+
+.edit-btn {
+    width: 30px;
+    height: 30px;
+
+    background-image: url(../images/edit.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.save-btn {
+    width: 30px;
+    height: 30px;
+
+    background: url(../images/save.png) no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
