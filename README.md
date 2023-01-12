@@ -57,23 +57,25 @@ All features of the page are fully responsive and adjust well for all screen siz
 - *Edit* and *Save* buttons
     - On click calls an event to modify the input and changes the class so it serves the save button. For more visual representation the pencil is switched to a save icon.
 ![Edit buton in action](assets/readme/edit.png) 
-    - Once the editing is complete, clicking on the save icon will call the edit button back and switch the icons as well.
+    - Once the editing is complete, clicking on the save icon will call the edit button back, by removing the edit mode and switching the icons as well.
 
 - *Check* and  *Reopen* buttons
     - The check button marks the task complete by moving it to the end of the list and replacing it's class, along with the representative icon. 
-    - This step can also be reverted by clicking on the reopen icon, which will re-append the task to the tasks that aren't yet completed.
+    - This step can also be reverted by clicking on the reopen icon, which will re-append the item to the tasks that aren't yet completed.
 
 - *Delete button*
     - As mistakes happen, this button is also needed and will remove the task from the list. If there are no more tasks the empty state message will pop back up on the screen. 
 
 ### Clock
 - As an extra feature a simple form of the current date and updating time is displayed on the top-right of the screen.
+
 ![Clock feature](assets/readme/date-time.png)
 
 ### Footer
 - The footer contains the social media links that open in a new tab and have hover effect, noticeable in the image below.
+
 ![Footer with social links and credits](assets/readme/footer-half-hover.png)
-- Attribute the author of the icons with external links. 
+- Attributes the author of the icons with external links. 
 
 ## Features to add 
 
@@ -108,7 +110,7 @@ All features of the page are fully responsive and adjust well for all screen siz
 - Responsiveness tested with [Chrome Dev Tools](https://developer.chrome.com/docs/devtools) and verified on different size mobiles, laptops and large monitors.
 - Browser compatibility tested in: Google Chrome, Mozzilla Firefox, Microsoft Edge and Brave with no resulting issues. 
 ![Browser testing](assets/readme/browser-test.jpg)
-- Social media links open in a new tab, tested multiple times by opening them at different times.
+- Social media links open in a new tab, tested multiple times by opening them at different intervals.
 - All JavaScript code was tested with the log function in DevTools console.
 - Empty state message tested by adding and removing list items. 
 - Input field thoroughly tested by adding multiple ToDo's.
@@ -131,7 +133,7 @@ All features of the page are fully responsive and adjust well for all screen siz
     - setTimeout function helped to resolve the issue and time is updating correctly. Possibly will look into another way!
 
 4. Empty State message was not called back after deleting all tasks:
-    - if cause added to the delete function
+    - if cause added to the delete function.
 
 #### Unresolved
 
