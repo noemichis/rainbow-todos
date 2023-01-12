@@ -1,5 +1,7 @@
 # Rainbow ToDo's
 
+![Front page on different screens](assets/readme/amiresponsive-white.png)
+
 #### [**Live Website**](https://noemichis.github.io/rainbow-todos/)
 
 A simple and colorful ToDo List project to organize daily tasks. It is created to be responsive on all screen sizes so users can easily access it from anywhere and offers control buttons for easy and intuitive interaction. 
@@ -12,6 +14,7 @@ A simple and colorful ToDo List project to organize daily tasks. It is created t
     - update tasks.
     - mark tasks complete.
     - delete tasks when no longer applicable.
+- Keep track of time.
 - Enjoy the design and colors to boost the day.
 
 ## Design
@@ -22,13 +25,52 @@ The colors were chosen with the color pallette generator [Coolors](https://coolo
 
 ![Five color collage](assets/readme/color-pallette.png)
 
-Fonts used in the project were `Quicksand` for the main heading and `Source Sans Pro` for the body of the page, both having a sans-serif font as backup. They were imported from [Google Fonts](http://fonts.google.com).
+Fonts used in the project were `Quicksand` for the heading and time objects, `Source Sans Pro` for the body of the page, both having a sans-serif font as backup. They were imported from [Google Fonts](http://fonts.google.com).
 
 The icons are sourced from [Flaticon](https://www.flaticon.com/) and were made by [Freepik](https://www.freepik.com/) in a lineal color style, which gives them a playful appearance. 
 
 ![Colors, fonts and icons](assets/readme//colors-font-icons.png)
 
 ## Features
+
+All features of the page are fully responsive and adjust well for all screen sizes, from extra small mobiles to large monitors and their functionality has been tested.
+
+### Landing page
+- Add an input task, where the submit button calls the function and creates the tasks. 
+- An empty state message, which indicates that no ToDo's have been added yet. This element is hidden when a task is added, then called back when all tasks have been closed. 
+![Input field with welcome message](assets/readme/empty-state.png)
+- The input element has validation alert and will prevent the user from submitting empty fields or input that only contains blank spaces. To make this alert prettier, [SweetAlert](https://sweetalert.js.org/guides/) was used.
+![SweetAlert enter task alert](assets/readme/validation.png)
+- For better user experience the input field changes on hover and when active.
+![Input field on hover effect](assets/readme/hover.png)
+- The submit button has a bounce on hover effect attributed, same as all the other button elements on the page. 
+
+### ToDo list items
+- Adding multiple elements with initial state and timestamp
+![Two ToDo inputs](assets/readme/time-feature.png)
+- **ToDo** and **Done** icons in front of the input visually indicate if a task is complete or not.
+![Todo and Done icons](assets/readme/todo-done.png)
+
+
+
+### Buttons
+- *Edit* and *Save* buttons
+    - On click calls an event to modify the input and changes the class so it serves the save button. For more visual representation the pencil is switched to a save icon.
+![Edit buton in action](assets/readme/edit.png) 
+    - Once the editing is complete, clicking on the save icon will call the edit button back and switch the icons as well.
+
+- *Check* and  *Reopen* buttons
+    - The check button marks the task complete by moving it to the end of the list and replacing it's class, along with the representative icon. 
+    - This step can also be reverted by clicking on the reopen icon, which will re-append the task to the tasks that aren't yet completed.
+
+- *Delete button*
+    - As mistakes happen, this button is also needed and will remove the task from the list. If there are no more tasks the empty state message will pop back up on the screen. 
+
+
+
+
+
+
 
 ## Features to add 
 
