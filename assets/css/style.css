@@ -222,8 +222,7 @@ h2 {
     border-radius: 5px 10px;
     text-align: center;
     border: 1px solid #483e4e;
-    font-size: 16px;
-    /* flex: 1; */
+    font-size: 14px;
 }
 
 .lead-img {
@@ -310,12 +309,6 @@ a:hover {
 
 /* Media screens */
 
-@media screen and (max-width: 320px) {
-    .todo-item {
-        font-size: 14px;
-    }
-}
-
 @media screen and (min-width: 380px) {
     h1 {
         font-size: 32px;
@@ -336,7 +329,7 @@ a:hover {
 
     .todo-item {
         flex: 1;
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
@@ -349,6 +342,10 @@ a:hover {
     #todo-list,
     #todo-done {
         width: 80%;
+    }
+
+    .todo-item {
+        font-size: 18px;
     }
 
     .edit-btn,
