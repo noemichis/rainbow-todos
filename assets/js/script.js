@@ -10,7 +10,6 @@ todoButton.addEventListener('click', addTodo);
 document.addEventListener('DOMContentLoaded', timeDate);
 
 // functions
-const date = new Date();
 
 // get date function
 function timeDate() {

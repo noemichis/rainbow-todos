@@ -66,15 +66,19 @@ h1 {
     font-family: 'Quicksand', sans-serif;
     font-size: 28px;
     text-align: center;
-    text-shadow: 1px 1px #d0f4de;
+    text-shadow: 1px 2px #d0f4de;
 }
 
 /* Form section */
 
-form {
-    width: 90%;
+#form-div {
     margin: 20px auto;
 
+    display: flex;
+    justify-content: center;
+}
+
+form {
     display: flex;
     justify-content: center;
 }
@@ -82,12 +86,13 @@ form {
 /*  Input field*/
 
 #todo-input {
-    width: 80%;
+    width: 90%;
     padding: 10px;
     background: linear-gradient(to top, rgba(255, 153, 200, 0.5), rgba(252, 246, 189, 0.5), rgba(208, 244, 222, 0.5), rgba(169, 222, 249, 0.5), rgba(229, 195, 249, 0.5));
     border-radius: 20px 0px;
     border: 1px solid #483e4e;
     font-size: 18px;
+    flex: 1;
 }
 
 #todo-input:focus,
@@ -99,6 +104,7 @@ form {
 #todo-btn img {
     width: 35px;
     height: 35px;
+    margin: 2px;
 }
 
 /* buttons */
@@ -187,6 +193,11 @@ h2 {
     align-items: center;
 }
 
+#todo-list,
+#todo-done {
+    width: 100%;
+}
+
 .elem {
     margin: 5px 0;
     padding: 5px 0;
@@ -209,9 +220,12 @@ h2 {
     text-align: center;
     border: 1px solid #483e4e;
     font-size: 16px;
+    flex: 1;
 }
 
 .lead-img {
+    width: 30px;
+    height: 30px;
     padding: 0;
 }
 
@@ -302,28 +316,29 @@ a:hover {
         width: 80%;
     }
 
+    #todo-list,
+    #todo-done {
+        width: 90%;
+    }
+
     #todo-input {
         font-size: 20px;
     }
 
     .todo-item {
-        width: 200px;
         font-size: 18px;
     }
 }
 
 @media screen and (min-width: 520px) {
-    form {
-        width: 400px;
-    }
-
-    .todo-item {
-        width: 300px;
-    }
-
     .lead-img {
         width: 35px;
         height: 35px;
+    }
+
+    #todo-list,
+    #todo-done {
+        width: 80%;
     }
 
     .edit-btn,
@@ -336,4 +351,23 @@ a:hover {
         height: 30px;
     }
 
+}
+
+@media screen and (min-width: 780px) {
+    header {
+        margin: 100px 0px 40px;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    form {
+        width: 600px;
+    }
+
+    #todo-list,
+    #todo-done {
+        width: 650px;
+    }
 }
