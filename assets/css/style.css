@@ -307,6 +307,12 @@ a:hover {
 
 /* Media screens */
 
+@media screen and (max-width: 320px) {
+    .todo-item {
+        font-size: 14px;
+    }
+}
+
 @media screen and (min-width: 380px) {
     h1 {
         font-size: 32px;
