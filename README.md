@@ -66,23 +66,77 @@ All features of the page are fully responsive and adjust well for all screen siz
 - *Delete button*
     - As mistakes happen, this button is also needed and will remove the task from the list. If there are no more tasks the empty state message will pop back up on the screen. 
 
+### Clock
+- As an extra feature a simple form of the current date and updating time is displayed on the top-right of the screen.
+![Clock feature](assets/readme/date-time.png)
 
-
-
-
-
+### Footer
+- The footer contains the social media links that open in a new tab and have hover effect, noticeable in the image below.
+![Footer with social links and credits](assets/readme/footer-half-hover.png)
+- Attribute the author of the icons with external links. 
 
 ## Features to add 
 
+- Add confirmation for delete button
 - Add local or cloud storage
+- Add a welcome section, like *"Happy Wednesday, what's for today?"*
+- Add filters for existent tasks  
 
 ## Testing
 
 ### Automated testing
 
+- HTML tested with [W3C Markup validation Service](https://validator.w3.org/)
+![Markup validation result](assets/readme/html-valid.png)
+
+- CSS tested with [The W3C CSS Validation Service](https://jigsaw.w3.org/)
+![CSS validation result](assets/readme/css-valid.png) 
+
+- For the JavaScript code [JSHint](https://jshint.com/) was used. To mention that the warnings are because the programme does not support ES6.
+![JavaScript validation result](assets/readme/jshint.png)
+
+- [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) for checking accessibility scores.
+#### Mobile report 
+![Mobile testing result](assets/readme/lighthouse-mobile.png)
+#### Desktop report
+![Desktop testing result](assets/readme/lighthouse-desktop.png)
+
+- [Code Spell Checker](https://open-vsx.org/extension/streetsidesoftware/code-spell-checker) extension was used along development
+
 ### Manual testing
 
+- Responsiveness tested with [Chrome Dev Tools](https://developer.chrome.com/docs/devtools) and verified on different size mobiles, laptops and large monitors.
+- Browser compatibility tested in: Google Chrome, Mozzilla Firefox, Microsoft Edge and Brave with no resulting issues. 
+![Browser testing](assets/readme/browser-test.jpg)
+- Social media links open in a new tab, tested multiple times by opening them at different times.
+- All JavaScript code was tested with the log function in DevTools console.
+- Empty state message tested by adding and removing list items. 
+- Input field thoroughly tested by adding multiple ToDo's.
+- Input validation and SweetAlert test was carried out by trying to submit fields that are empty or with blank spaces. 
+- Buttons functionality was tried by clicking them over and over to ensure they have no errors.
+- The time and date feature initially tested with console.log, then monitoring the change of minutes. For more accurate results I tested the time with seconds included and removed them afterwards.
+- Timestamp accuracy tested by adding multiple inputs and observing the time.
+
 ### Bugs
+
+#### Resolved
+
+1. Initially the validation was not thorough and blank spaces could be submitted:
+    - adjust if statement for stricter checking.
+
+2. Input field wasn't responsive after some adjustments:
+    - add flex properties to the parent. 
+
+3. Time was only updating on window refresh:
+    - setTimeout function helped to resolve the issue and time is updating correctly. Possibly will look into another way!
+
+4. Empty State message was not called back after deleting all tasks:
+    - if cause added to the delete function
+
+#### Unresolved
+
+1. Edit button bounce effect gets stuck after modifying and saving the input. After clicking anywhere else on the page is back to normal:
+    - possible cause could be the way I created the pair of buttons, but it does not affect the other pair.
 
 ## Deployment
 
@@ -126,18 +180,20 @@ The following *`git commands`* were used to commit and push the changes to the r
 
 I used several sites to understand the logic behind JavaScript, as:
 - [Code Institute Program](https://codeinstitute.net/)
-- [W3Schools](https://www.w3schools.com)
 - [MDN](https://developer.mozilla.org/en-US/) 
 - [CSS-tricks](https://css-tricks) 
 - [Stack Overflow](https://stackoverflow.com/)
 - [JavaScript in Plain English](https://javascript.plainenglish.io/)
+- [freeCodeCamp](https://www.freecodecamp.org/)
+- [CodePen](https://codepen.io/)
 
 Also, I watched many YouTube videos, analyzed various to-do projects and used the combined knowledge:
 - [Developed By Ed](https://www.youtube.com/watch?v=Ttf3CEsEwMQ&ab_channel=developedbyed) - base design of the project
 - [Todo List Application by Chris Sun](https://codepad.co/snippet/todo-list-application) - creating and appending DOM elements
 - [CodeExplained](https://www.youtube.com/watch?v=i1pxPSl9ZHc&ab_channel=CodeExplained) - functions and events
+- [W3Schools](https://www.w3schools.com) - javascript clock
 
-[Ian Lunn](https://ianlunn.co.uk/articles/hover-css-tutorial-introduction) - CSS code for bounce on hover effect
+- [Ian Lunn](https://ianlunn.co.uk/articles/hover-css-tutorial-introduction) - CSS code for bounce on hover effect
 
 ## Acknowledgements 
 
